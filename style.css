@@ -1,83 +1,108 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 /* Body */
-body {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: repeating-radial-gradient(circle, black, red 100px);
-    color: aliceblue;
-    font-family: Arial, sans-serif;
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:repeating-radial-gradient(circle, black, red 100px);
+    color:aliceblue;
+    font-family:Arial, sans-serif;
+    padding:20px;
 }
 
 /* Game wrapper */
-.game {
-    text-align: center;
+.game{
+    text-align:center;
+    width:100%;
+    max-width:500px;
+}
+
+/* Title */
+h1{
+    font-size:clamp(1.8rem,4vw,2.5rem);
 }
 
 /* Board */
-.container {
-    height: 50vh;
-    width: 50vw;
-    max-width: 400px;
-    max-height: 400px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    margin: 20px auto;
-    border-radius: 17px;
-    background-color: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(15px);
+.container{
+    width:90vw;
+    max-width:400px;
+    aspect-ratio:1/1;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    grid-template-rows:repeat(3,1fr);
+    margin:20px -7px;
+    border-radius:17px;
+    background-color:rgba(255,255,255,0.08);
+    backdrop-filter:blur(15px);
 }
 
 /* Cells */
-.cell {
-    border: 2px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 3rem;
-    cursor: pointer;
-    user-select: none;
+.cell{
+    border:2px solid black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:clamp(2rem,8vw,3rem);
+    cursor:pointer;
+    user-select:none;
 }
 
 /* Rounded corners */
-.cell:nth-child(1) {
-    border-top-left-radius: 10px;
+.cell:nth-child(1){
+    border-top-left-radius:10px;
 }
 
-.cell:nth-child(3) {
-    border-top-right-radius: 10px;
+.cell:nth-child(3){
+    border-top-right-radius:10px;
 }
 
-.cell:nth-child(7) {
-    border-bottom-left-radius: 10px;
+.cell:nth-child(7){
+    border-bottom-left-radius:10px;
 }
 
-.cell:nth-child(9) {
-    border-bottom-right-radius: 10px;
+.cell:nth-child(9){
+    border-bottom-right-radius:10px;
 }
 
-.cell:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+.cell:hover{
+    background-color:rgba(255,255,255,0.1);
+}
+
+/* Status text */
+#status{
+    font-size:clamp(1rem,3vw,1.2rem);
+    margin-bottom:10px;
 }
 
 /* Button */
-button {
-    padding: 10px 20px;
-    font-size: 1rem;
-    background: red;
-    border: none;
-    border-radius: 8px;
-    color: white;
-    cursor: pointer;
+button{
+    padding:10px 20px;
+    font-size:clamp(0.9rem,3vw,1rem);
+    background:red;
+    border:none;
+    border-radius:8px;
+    color:white;
+    cursor:pointer;
 }
 
-button:hover {
-    background: darkred;
+button:hover{
+    background:darkred;
+}
+
+/* Extra small screens */
+@media (max-width:400px){
+
+    .container{
+        width:90vw;
+    }
+
+    button{
+        width:100%;
+    }
 }

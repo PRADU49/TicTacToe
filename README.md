@@ -17,7 +17,7 @@ Tic Tac Toe is a two-player game played on a 3×3 grid. Players take turns placi
 
 This project demonstrates how HTML is used to create the structure of the board, CSS is used to style and layout the game, and JavaScript is used to control the game logic and interactions.
 
----
+--- 
 
 ## File Structure
 
