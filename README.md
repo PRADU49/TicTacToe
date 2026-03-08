@@ -9,7 +9,7 @@
 
 This project is a simple Tic Tac Toe game built using HTML, CSS, and JavaScript. It is designed for beginners who want to understand how a small game works in the browser using basic web technologies. The game runs entirely on the client side and does not require any external libraries or frameworks.
 
----
+--- 
 
 ## Project Description
 

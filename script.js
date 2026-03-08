@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
         [2, 5, 8],
         [0, 4, 8], // Daigoanals win
         [2, 4, 6]
-    ];
+    ]; 
 
     // Handleing clicks of both player or Runs when a player clicks a box
     function handleClick(e) {
